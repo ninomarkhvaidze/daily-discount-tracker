@@ -26,4 +26,10 @@ jobs:
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          USER_HEIGHT_CM: ${{ secrets.USER_HEIGHT_CM }}
+          USER_CHEST_CM: ${{ secrets.USER_CHEST_CM }}
+          USER_WAIST_CM: ${{ secrets.USER_WAIST_CM }}
+          USER_HIPS_CM: ${{ secrets.USER_HIPS_CM }}
+          USER_CLOTHING_SIZE: ${{ secrets.USER_CLOTHING_SIZE }}
+          USER_PREFERRED_FIT: ${{ secrets.USER_PREFERRED_FIT }}
         run: python main.py
