@@ -73,6 +73,12 @@ It runs:
 * **Automatically** every day at 11:00 AM using the `Asia/Tbilisi` timezone
 
 The Resend API key is stored securely as a **GitHub Actions repository secret** rather than being included in the source code.
+## Successful GitHub Actions Run
+
+The pipeline was tested successfully using GitHub Actions.
+
+![GitHub Actions successful run](screenshots/github-actions-success.png)
+
 
 ## What I Practiced
 
