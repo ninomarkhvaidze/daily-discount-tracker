@@ -100,7 +100,7 @@ for product, items in grouped.items():
 
 print(digest)
 response = resend.Emails.send({
-    "from": "onboarding@resend.dev",
+    "from": "Morrison Discounts <onboarding@resend.dev>",
     "to": "nmarkhvaidze@gmail.com",
     "subject": "Morrison Shoes — Daily Discounts",
     "text": digest
