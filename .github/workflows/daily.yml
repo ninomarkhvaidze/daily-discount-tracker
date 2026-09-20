@@ -1,0 +1,28 @@
+name: Daily Discount Digest
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 11 * * *"
+      timezone: "Asia/Tbilisi"
+
+jobs:
+  run-tracker:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run discount tracker
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        run: python main.py
