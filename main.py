@@ -1,12 +1,20 @@
 import os
 import requests
 import resend
-from user_profile import USER_PROFILE
+
 from dotenv import load_dotenv
 from bs4 import BeautifulSoup
 from openai import OpenAI
 
 load_dotenv()
+USER_PROFILE = {
+    "height_cm": os.getenv("USER_HEIGHT_CM"),
+    "chest_cm": os.getenv("USER_CHEST_CM"),
+    "waist_cm": os.getenv("USER_WAIST_CM"),
+    "hips_cm": os.getenv("USER_HIPS_CM"),
+    "usual_clothing_size": os.getenv("USER_CLOTHING_SIZE", "S"),
+    "preferred_fit": os.getenv("USER_PREFERRED_FIT", "regular")
+}
 
 resend.api_key = os.getenv("RESEND_API_KEY")
 
