@@ -25,4 +25,5 @@ jobs:
       - name: Run discount tracker
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python main.py
